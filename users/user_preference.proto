@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package users;
+
+message UserPreferences {
+  string user_id = 1;
+  string currency = 2;
+  double monthly_budget = 3;
+  bool notifications_enabled = 4;
+}
+
+message GetUserPreferencesRequest {
+  string user_id = 1;
+}
+
+message GetUserPreferencesResponse {
+  UserPreferences preferences = 1;
+}
+
+message UpdateUserPreferencesRequest {
+  UserPreferences preferences = 1;
+}
+
+message UpdateUserPreferencesResponse {
+  bool success = 1;
+}
+
+service UserPreferencesService {
+  rpc GetUserPreferences(GetUserPreferencesRequest) returns (GetUserPreferencesResponse);
+  rpc UpdateUserPreferences(UpdateUserPreferencesRequest) returns (UpdateUserPreferencesResponse);
+}
