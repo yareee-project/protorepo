@@ -10,11 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: bufbuild/buf-setup-action@v1
-      - uses: bufbuild/buf-breaking-action@v1
+      - uses: bufbuild/buf-action@v1
         with:
-          input: proto
-          against: 'https://github.com/yareee-project/protorepo.git#branch=main,ref=HEAD~1,subdir=proto'
-      - uses: bufbuild/buf-lint-action@v1
-        with:
-          input: proto
+          pr_comment: true
