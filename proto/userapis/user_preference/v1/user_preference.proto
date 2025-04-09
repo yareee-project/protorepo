@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package users;
+package user_preference.v1;
+
+option go_package = "user_preference.v1";
 
 message UserPreferences {
   string user_id = 1;

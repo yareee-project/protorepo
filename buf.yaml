@@ -1,0 +1,12 @@
+version: v2
+
+modules:
+  - path: proto/userapis
+    name: buf.build/yaree-org/userss
+
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE
