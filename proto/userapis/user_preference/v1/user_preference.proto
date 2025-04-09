@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package user_preference.v1;
+package user_preference;
 
 option go_package = "user_preference.v1";
 
